@@ -2934,6 +2934,8 @@ export namespace people_v1 {
      *     readMask: 'placeholder-value',
      *     // Optional. Whether the response should include `next_sync_token`, which can be used to get all changes since the last request. For subsequent sync requests use the `sync_token` param instead. Initial sync requests that specify `request_sync_token` have an additional rate limit.
      *     requestSyncToken: 'placeholder-value',
+     *     // Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if not set.
+     *     sources: 'placeholder-value',
      *     // Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to retrieve only the resources changed since the last request. Sync requests that specify `sync_token` have an additional rate limit. When the `syncToken` is specified, resources deleted since the last sync will be returned as a person with [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to true. When the `syncToken` is specified, all other parameters provided to `ListOtherContacts` must match the call that provided the sync token.
      *     syncToken: 'placeholder-value',
      *   });
@@ -3207,6 +3209,10 @@ export namespace people_v1 {
      * Optional. Whether the response should include `next_sync_token`, which can be used to get all changes since the last request. For subsequent sync requests use the `sync_token` param instead. Initial sync requests that specify `request_sync_token` have an additional rate limit.
      */
     requestSyncToken?: boolean;
+    /**
+     * Optional. A mask of what source types to return. Defaults to READ_SOURCE_TYPE_CONTACT if not set.
+     */
+    sources?: string[];
     /**
      * Optional. A sync token, received from a previous `ListOtherContacts` call. Provide this to retrieve only the resources changed since the last request. Sync requests that specify `sync_token` have an additional rate limit. When the `syncToken` is specified, resources deleted since the last sync will be returned as a person with [`PersonMetadata.deleted`](/people/api/rest/v1/people#Person.PersonMetadata.FIELDS.deleted) set to true. When the `syncToken` is specified, all other parameters provided to `ListOtherContacts` must match the call that provided the sync token.
      */
