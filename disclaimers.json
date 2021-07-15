@@ -352,6 +352,10 @@
     "package": "@google-cloud/essential-contacts"
   },
   {
+    "api": "eventarc",
+    "package": "@google-cloud/eventarc"
+  },
+  {
     "api": "gkehub",
     "package": "@google-cloud/gke-hub"
   },
